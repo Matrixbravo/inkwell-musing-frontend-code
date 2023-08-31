@@ -1,12 +1,18 @@
-<mat-toolbar class="header">
-    <a class="logo" [routerLink]="''">
+<mat-toolbar class="header" >
+    <a class="logo" [routerLink]="['/home']">
         <img class="logo" src="../assets/logo/inkwell.png">
     </a>
     <nav class="navigation">
-        <a href="#">Home</a>
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/app']">Poetry Blog</a>
         <a href="#">About</a>
-        <a href="#">Services</a>
         <a href="#">Contact</a>
-        <button mat-button class="btnLgin-popup" href="/login"><i class="icon ion-md-contact"></i></button>
+        <button class="btnLgin-popup"><img [src]="userProfile?.picture" alt="Profile Photo" (click)="toggleMenu()"/></button>
+        <div class="dropdown_menu" [ngClass]="{'open': isMenuOpen}">
+            <li>Profile</li>
+            <li>Profile</li>
+            <li>Profile</li>
+            <li (click)="handleSignOut()" class="signout-button">Sign Out</li>
+        </div>  
     </nav>
 </mat-toolbar>

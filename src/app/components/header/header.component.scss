@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +21,7 @@
 }
 
 .logo {
+    margin-top: 10px;
     width: 40px;
     height: auto;
 }
@@ -30,10 +32,10 @@
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
-.navigation a::after{
+.navigation a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -59,13 +61,59 @@
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
+    position: relative;
     margin-left: 40px;
     transition: .5s;
+    border: none;
+    background: transparent;
 }
 
-.navigation .btnLgin-popup:hover {
-    color: #162938;
+.navigation .btnLgin-popup img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: absolute;
+  margin-top: -25px;
+  
 }
 
+.navigation .btnLgin-popup img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
+.dropdown_menu {
+    position: absolute;
+    right: 1em;
+    top: 60px;
+    height: 0;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+.dropdown_menu.open{
+    height: auto;
+    padding: 10px;
+}
+
+.dropdown_menu li {
+    list-style: none;
+    padding: 0.7em;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown_menu li:hover {
+    color: inherit;
+}

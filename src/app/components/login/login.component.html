@@ -1,9 +1,6 @@
 <div class="container">
      <div class="background-image">
           <div class="wrapper">
-               <span class="icon-close">
-                    <i class="icon ion-md-close"></i>
-               </span>
                <div class="form-box login">
                     <h2>Login</h2>
                     <form (ngSubmit)="onSubmit()" actions="#">
@@ -18,7 +15,7 @@
                               <label>Password</label>
                          </div>
                          <div class="remember-forgot">
-                              <label><input type="checkbox">Remember me</label>
+                              <label><input class="btn-checkbox" type="checkbox">Remember me</label>
                               <a href="#">Forgot Password?</a>
                          </div>
                          <button type="submit" class="btn">Login</button>
@@ -36,7 +33,8 @@
                                                   data-theme="outline" data-text="signin_with" data-size="large">
                                              </div>
                                         </div>
-                                   </a></p>
+                                   </a>
+                              </p>
                          </div>
                     </form>
                </div>
