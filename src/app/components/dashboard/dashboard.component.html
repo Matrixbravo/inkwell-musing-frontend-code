@@ -1,35 +1,89 @@
 <div class="container">
-  <div fxLayout="column" fxLayoutAlign="space-evenly center" >
-  <div>
-    <h2 class="dashboard-heading">Let your <span class="text-primary">hands</span> speak your heart</h2>
-  </div>
+  <div fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div>
+      <h2 class="dashboard-heading">Let your <span class="text-primary">hands</span> speak your heart</h2>
+    </div>
 
-  <div class="dashboard-subheading">Trending Poem</div>
+    <div class="dashboard-subheading">Trending Poem</div>
 
-  <div fxLayout="row" fxLayoutAlign="space-evenly center" class="cards-block">
-    <div class="card">
-      <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
-      <div class="card-body">
-        <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic"/>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" class="cards-block">
+      <div class="card">
+        <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
+        <div class="card-body">
+          <a [routerLink]="['/profile']">
+            <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic" />
+          </a>
+        </div>
+        <hr class="card-divider">
       </div>
-      <hr class="card-divider">
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
-      <div class="card-body">
-        <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic"/>
+      <div class="card">
+        <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
+        <div class="card-body">
+          <a [routerLink]="['/profile']">
+            <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic" />
+          </a>
+        </div>
+        <div class="card-bottom">
+          <hr class="card-divider">
+        </div>
       </div>
-    <div class="card-bottom">
-      <hr class="card-divider">
-    </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
-      <div class="card-body">
-        <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic"/>
+      <div class="card">
+        <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
+        <div class="card-body">
+          <a [routerLink]="['/profile']">
+            <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic" />
+          </a>
+        </div>
+        <hr class="card-divider">
       </div>
-      <hr class="card-divider">
     </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div class="info">
+        <div class="item first">
+          <i class="icon ion-md-share"></i>
+          <h1 class="header">Share Your Work!</h1>
+          <h2 class="sub-header">Share your poetry with us over mail, or our social media.</h2>
+        </div>
+      </div>
+      <div class="info">
+        <div class="item second">
+          <i class="icon ion-md-people"></i>
+          <h1 class="header">Poem Community!</h1>
+          <h2 class="sub-header">We are writer comminity trying to interact with our words and verses.</h2>
+        </div>
+      </div>
+      <div class="info">
+        <div class="item third">
+          <i class="icon ion-md-create"></i>
+          <h1 class="header">Re-create Your Soul!</h1>
+          <h2 class="sub-header">Create a work whom everyone can love and share.</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div class="joined">
+        <div class="joined first">
+          <i class="icon ion-md-share"></i>
+          <h1 class="header">Share Your Work!</h1>
+          <h2 class="sub-header">Share your poetry with us over mail, or our social media.</h2>
+        </div>
+      </div>
+      <div class="joined">
+        <div class="joined second">
+          <i class="icon ion-md-people"></i>
+          <h1 class="header">Poem Community!</h1>
+          <h2 class="sub-header">We are writer comminity trying to interact with our words and verses.</h2>
+        </div>
+      </div>
+      <div class="joined">
+        <div class="joined third">
+          <i class="icon ion-md-create"></i>
+          <h1 class="header">Re-create Your Soul!</h1>
+          <h2 class="sub-header">Create a work whom everyone can love and share.</h2>
+        </div>
+      </div>
+    </div> -->
   </div>
-</div>
 </div>
