@@ -1,39 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
+
 .container {
+    max-width: 100%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E6B17E;
-    height: 100vh;
-    /* Adjust this to your preferred height */
+    background-color: #C56E33;
+    // height: 100vh;
 }
 
-.background-image {
-    display: flex;
+.home {
+    width: 100%;
+    min-height: 440px;
+    background: var(--container-color);
+    display: grid;
     justify-content: center;
     align-items: center;
-    width: 83%;
-    /* Adjust this to control the logo's size */
-    height: auto;
-    min-height: 100vh;
-    background: url('../../../assets/logo/background.png') no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
-#signout-button {
-    background-color: rgb(241, 176, 10);
-    color: white;
-    text-align: center;
-    border: none;
-    padding: 1em;
-    width: 8em;
+.dashboard-heading {
+    position: relative;
+    margin-top: 0;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(178, 252, 227);
+    padding: 15px;
+}
+
+.dashboard-subheading {
+    text-decoration: underline;
+    text-shadow: black;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(63, 63, 63);
+    padding: 15px;
+}
+
+.cards-block {
+    margin: 100px 0 100px;
+}
+
+.card {
+    margin: 0 12px;
+    width: 400px;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 20px 24px 26px rgba(0, 0, 0, 0.1)
+}
+
+.card-divider {
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px; 
+    margin-bottom: 55px;
+    border-top: 1.5px solid #000;
+}
+
+.profile-pic {
+    border: 1.5px solid black;
+    width: 80px;
+    height: 80px;
+    margin-left: 40%;
+    margin-top: -40px;
+    border-radius: 50%;
+    object-fit: cover;
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    position: absolute;
+}
+
+.icon ion-md-heart{
+    margin-bottom: 15px;
 }

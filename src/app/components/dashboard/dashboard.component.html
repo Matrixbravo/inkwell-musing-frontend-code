@@ -1,8 +1,35 @@
-<div class="container" >
-  <div class="background-image">
-    <div class="wrapper">
-      <br />
-      <p>dashboard works!</p>
+<div class="container">
+  <div fxLayout="column" fxLayoutAlign="space-evenly center" >
+  <div>
+    <h2 class="dashboard-heading">Let your <span class="text-primary">hands</span> speak your heart</h2>
+  </div>
+
+  <div class="dashboard-subheading">Trending Poem</div>
+
+  <div fxLayout="row" fxLayoutAlign="space-evenly center" class="cards-block">
+    <div class="card">
+      <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
+      <div class="card-body">
+        <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic"/>
+      </div>
+      <hr class="card-divider">
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
+      <div class="card-body">
+        <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic"/>
+      </div>
+    <div class="card-bottom">
+      <hr class="card-divider">
+    </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../assets/logo/home-2.webp" alt="Card image cap">
+      <div class="card-body">
+        <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic"/>
+      </div>
+      <hr class="card-divider">
     </div>
   </div>
+</div>
 </div>

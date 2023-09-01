@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+
 declare var handleSignout: any; // Declare the global function to avoid TypeScript errors
 
 @Component({
@@ -13,10 +14,16 @@ export class HeaderComponent {
 
   public isMenuOpen: boolean = false;
   userProfile: any;
+  isScrolled = false;
 
   ngOnInit(): void {
     this.userProfile = JSON.parse(sessionStorage.getItem("loggedInUser") || "");
     console.log("userProfile:", this.userProfile)
+  };
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    this.isScrolled = window.scrollY > 0;
   }
 
   handleSignOut() {

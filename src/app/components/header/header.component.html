@@ -1,15 +1,15 @@
-<mat-toolbar class="header" >
+<mat-toolbar class="header" [ngClass]="{'isScrolled': isScrolled}">
     <a class="logo" [routerLink]="['/home']">
         <img class="logo" src="../assets/logo/inkwell.png">
     </a>
     <nav class="navigation">
         <a [routerLink]="['/home']">Home</a>
-        <a [routerLink]="['/app']">Poetry Blog</a>
+        <a [routerLink]="['/poetryBlog']">Poetry Blog</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
         <button class="btnLgin-popup"><img [src]="userProfile?.picture" alt="Profile Photo" (click)="toggleMenu()"/></button>
         <div class="dropdown_menu" [ngClass]="{'open': isMenuOpen}">
-            <li>Profile</li>
+            <li [routerLink]="['/profile']">Profile</li>
             <li>Profile</li>
             <li>Profile</li>
             <li (click)="handleSignOut()" class="signout-button">Sign Out</li>

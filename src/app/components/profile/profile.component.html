@@ -1,0 +1,13 @@
+<div class="container">
+    <div fxLayout="column" fxLayoutAlign="space-evenly center">
+        <div>
+            <img class="card-img-top" [src]="'../assets/logo/' + getUserDetails()?.background_profile_pic" alt="Card image cap">
+        </div>
+        <div>
+            <img [src]="userProfile?.picture" alt="Profile Photo" class="profile-pic"/>
+        </div>
+        <div class="profile-header">
+            <h2 class="name">{{ getUserDetails()?.name }}</h2>
+        </div>
+    </div>
+</div>

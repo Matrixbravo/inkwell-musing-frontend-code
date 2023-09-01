@@ -10,7 +10,7 @@ declare var handleSignout: any; // Declare the global function to avoid TypeScri
 export class DashboardComponent implements OnInit {
   constructor(private router: Router) {}
 
-  public userProfile: boolean = false;
+  userProfile: any;
 
   ngOnInit(): void {
     this.userProfile = JSON.parse(sessionStorage.getItem("loggedInUser") || "");

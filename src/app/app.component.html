@@ -2,3 +2,9 @@
     <app-header></app-header>
 </div>
 <router-outlet></router-outlet>
+<div *ngIf="shouldShowDashboard">
+    <app-dashboard></app-dashboard>
+</div>
+<div *ngIf="userProfile">
+    <app-footer></app-footer>
+</div>

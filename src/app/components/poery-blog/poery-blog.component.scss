@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #E6B17E;
     height: 100vh;
     /* Adjust this to your preferred height */
 }
@@ -24,7 +25,7 @@
     /* Adjust this to control the logo's size */
     height: auto;
     min-height: 100vh;
-    background: url('../../../assets/logo/home-1.webp') no-repeat;
+    background: url('../../../assets/logo/home-2.webp') no-repeat;
     background-size: cover;
     background-position: center;
 }
