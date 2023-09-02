@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="background-image">
+         <div class="wrapper">
+              <div class="form-box register">
+                   <h2>Registeration</h2>
+                   <form (ngSubmit)="onSubmit()" actions="#">
+                        <div class="input-box">
+                             <span class="icon"><i class="icon ion-md-person"></i></span>
+                             <input type="text" id="userName" formControlName="userName" required>
+                             <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                             <span class="icon"><i class="icon ion-md-mail"></i></span>
+                             <input type="email" required>
+                             <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                             <span class="icon"><i class="icon ion-md-lock"></i></span>
+                             <input type="password" required>
+                             <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                             <label><input class="btn-checkbox" type="checkbox">agree to the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                             <p>Already have an account?><a href="/login">Login</a></p>
+                        </div>
+                   </form>
+              </div>
+         </div>
+    </div>
+</div>
