@@ -8,12 +8,20 @@ declare var handleSignout: any; // Declare the global function to avoid TypeScri
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   userProfile: any;
 
   ngOnInit(): void {
-    this.userProfile = JSON.parse(sessionStorage.getItem("loggedInUser") || "");
+    const storedUserData = sessionStorage.getItem("loggedInUser");
+    if (storedUserData) {
+      try {
+        this.userProfile = JSON.parse(storedUserData);
+      } catch (error) {
+        console.error("Error parsing stored user data:", error);
+        // Handle the error, e.g., set this.userProfile to a default value
+      }
+    }
   }
 
   handleSignOut() {
